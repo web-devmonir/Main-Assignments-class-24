@@ -1,0 +1,91 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+    font-family: 'Spartan', sans-serif;
+}
+
+/*  ======================== header_section  ============================  */
+.header_menu {
+    background-color: #e7e6e8;
+}
+
+.header_menu .nav_menu {
+    padding: 0;
+}
+
+.header_menu .logo {
+    width: 12%;
+}
+
+.header_menu img {
+    width: 100%;
+}
+
+.header_menu img ul {}
+
+.header_menu ul li {
+    margin: 0px 19px;
+    padding: 0px 5px;
+    line-height: 104px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.header_menu ul li a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+}
+.header_menu ul li a:hover{
+    color: #3763eb;
+}
+.header_menu ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #3763eb;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.header_menu ul li:hover::after  {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header_menu ul li:hover a {
+    color: #3763eb !important;
+}
+
+
+.header_menu .header_btn .menu_btn {
+    border-radius: 30px;
+    color: #3763eb;
+    padding: 12px 26px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    margin-left: 24px;
+    font-weight: 600;
+}
+.header_menu .active:active {
+    color: #3763eb;
+}
+.header_menu .li_active:active{
+    border: 1px solid #3763eb;
+}
+.header_menu li:active {
+    border-bottom: 3px solid #3763eb;
+}
