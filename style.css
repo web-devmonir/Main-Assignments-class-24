@@ -11,9 +11,15 @@ a {
     font-family: 'Spartan', sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
 /*  ======================== header_section  ============================  */
 .header_menu {
     background-color: #e7e6e8;
+    position: relative;
+    z-index: 1;
 }
 
 .header_menu .nav_menu {
@@ -28,12 +34,10 @@ a {
     width: 100%;
 }
 
-.header_menu img ul {}
-
 .header_menu ul li {
     margin: 0px 19px;
     padding: 0px 5px;
-    line-height: 104px;
+    line-height: 103px;
     position: relative;
     transition: all .2s ease-in-out;
 }
@@ -44,15 +48,17 @@ a {
     font-weight: 500;
     transition: all .4s ease-in-out;
 }
-.header_menu ul li a:hover{
+
+.header_menu ul li:hover a {
     color: #3763eb;
 }
+
 .header_menu ul li::after {
     content: "";
     height: 3px;
     width: 0;
     background-color: #3763eb;
-    top: 100%;
+    top: 98.5%;
     left: 0;
     position: absolute;
     opacity: 0;
@@ -60,32 +66,256 @@ a {
     transition: all .4s ease-in-out;
 }
 
-.header_menu ul li:hover::after  {
+.header_menu ul li:hover::after {
     width: 100%;
     opacity: 1;
     visibility: visible;
 }
 
-.header_menu ul li:hover a {
-    color: #3763eb !important;
+.header_menu ul li a.activee {
+    color: #3763eb;
+}
+
+.header_menu ul li.li_active {
+    border-bottom: 3px solid #3763eb;
+}
+
+/* dropdown */
+.header_menu ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    padding: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.header_menu ul li ul li {
+    list-style-type: none;
+    background-color: #0201ff;
+    border: 19px solid #fff;
+    line-height: 68px;
+    margin: 0;
 }
 
 
+
+.header_menu ul li ul li a {
+    color: #fff;
+}
+
+.header_menu ul li ul li:hover::after {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header_menu ul li:hover ul li a {
+    color: #fff !important;
+}
+
+.header_menu ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* button */
 .header_menu .header_btn .menu_btn {
     border-radius: 30px;
     color: #3763eb;
     padding: 12px 26px;
     background-color: #fff;
-    border: 1px solid #fff;
+    border: 0px;
     margin-left: 24px;
     font-weight: 600;
+    transition: all .4s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    outline: none;
 }
-.header_menu .active:active {
+
+.header_menu .header_btn .menu_btn:hover {
+    color: #fff;
+}
+
+.header_menu .header_btn .menu_btn::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #7869fa;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+}
+
+.header_menu .header_btn .menu_btn:hover::after {
+    width: 100%;
+}
+
+/* ======================== baner_section  ============================  */
+.baner_section {
+    background-color: #f6f9fc;
+    overflow: hidden;
+    height: 74vh;
+}
+
+/* .baner_section .baner_width {
+    width: 1613px;
+} */
+
+.baner_section .left_baner_content {
+    padding-top: 159px;
+}
+
+.baner_section .left_baner_content h1 {
+    font-weight: 600;
+    line-height: 4.7rem;
+    font-size: 52px;
+}
+
+.baner_section .left_baner_content p {
+    font-size: 19px;
+    margin: 30px 0;
+    font-weight: 300;
+    color: #767676;
+}
+
+.baner_section .left_baner_content .baner_btn {
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 50px;
+    margin-top: 19px;
+    transition: all .4s ease-in-out;
+}
+
+.baner_section .left_baner_content .baner_btn:hover {
+    background-color: #fff;
+    color: #0d6efd;
+}
+
+.baner_section img {
+    border-radius: 50%;
+    position: absolute;
+    top: -194px;
+    right: -463px;
+    height: 888px;
+    width: auto;
+}
+
+.baner_section .baner_right_img {
+    position: relative;
+}
+
+/* ======================== service_section  ============================ */
+.service_section {
+    padding: 12px 0 110px 0 !important;
+}
+
+.service_section .service_top_content {}
+
+.service_section .service_top_content hr {
+    width: 63px;
+    height: 3px;
+    opacity: 1;
     color: #3763eb;
 }
-.header_menu .li_active:active{
-    border: 1px solid #3763eb;
+
+.service_section .service_top_content h4 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #0d6efd;
 }
-.header_menu li:active {
-    border-bottom: 3px solid #3763eb;
+
+.service_section .service_top_content h1 {
+    font-weight: 700;
+    line-height: 3.5rem;
+    margin: 23px 0;
+    font-size: 45px;
+}
+
+.service_section .service_top_content p {
+    font-size: 19px;
+    color: #767676;
+    font-weight: 300;
+}
+
+.service_section .service_item {
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.service_section .service_item h3 {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 2.0rem;
+}
+
+.service_section .service_item .icone {
+    background-color: #3763eb;
+    color: white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin: 46px 0;
+    border-radius: 38px 38px 38px 0px;
+    position: relative;
+    margin-bottom: 55px;
+    transition: all .4s ease-in-out;
+}
+
+.service_section .service_item .icone::after {
+    content: "";
+    top: 144%;
+    left: 0;
+    height: 3px;
+    width: 40%;
+    background-color: #3763eb;
+    position: absolute;
+    transition: all .4s ease-in-out;
+}
+
+.service_section .service_item p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #767676;
+}
+
+.service_section .service_item:hover {
+    background-color: #3763eb !important;
+    color: white;
+}
+
+.service_section .service_item:hover p {
+    color: white;
+}
+
+.service_section .service_item:hover .icone {
+    background-color: white;
+    color: #3763eb;
+}
+
+.service_section .service_item:hover ::after {
+    width: 80%;
+    background-color: white;
+}
+
+.service_section .first_position {
+    position: relative;
+    z-index: 1;
+}
+
+.service_section .first_position img {
+    position: absolute;
+    top: 129px;
+    left: -53px;
+    z-index: -1;
 }
