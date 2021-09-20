@@ -1,663 +1,297 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a {
-    font-family: 'Spartan', sans-serif;
-}
-
-img {
-    width: 100%;
-}
-
-/*  ======================== header_section  ============================  */
-.header_menu {
-    background-color: #e7e6e8;
-    position: relative;
-    z-index: 1;
-}
-
-.header_menu .nav_menu {
-    padding: 0;
-}
-
-.header_menu .logo {
-    width: 12%;
-}
-
-.header_menu img {
-    width: 100%;
-}
-
-.header_menu ul li {
-    margin: 0px 19px;
-    padding: 0px 5px;
-    line-height: 103px;
-    position: relative;
-    transition: all .2s ease-in-out;
-}
-
-.header_menu ul li a {
-    color: #111;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all .4s ease-in-out;
-}
-
-.header_menu ul li:hover a {
-    color: #3763eb;
-}
-
-.header_menu ul li::after {
-    content: "";
-    height: 3px;
-    width: 0;
-    background-color: #3763eb;
-    top: 98.5%;
-    left: 0;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .4s ease-in-out;
-}
-
-.header_menu ul li:hover::after {
-    width: 100%;
-    opacity: 1;
-    visibility: visible;
-}
-
-.header_menu ul li a.activee {
-    color: #3763eb;
-}
-
-.header_menu ul li.li_active {
-    border-bottom: 3px solid #3763eb;
-}
-
-/* dropdown */
-.header_menu ul li ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 250px;
-    padding: 0;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .4s ease-in-out;
-}
-
-.header_menu ul li ul li {
-    list-style-type: none;
-    background-color: #0201ff;
-    border: 19px solid #fff;
-    line-height: 68px;
-    margin: 0;
-}
-
-
-
-.header_menu ul li ul li a {
-    color: #fff;
-}
-
-.header_menu ul li ul li:hover::after {
-    width: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.header_menu ul li:hover ul li a {
-    color: #fff !important;
-}
-
-.header_menu ul li:hover ul {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* button */
-.header_menu .header_btn .menu_btn {
-    border-radius: 30px;
-    color: #3763eb;
-    padding: 12px 26px;
-    background-color: #fff;
-    border: 0px;
-    margin-left: 24px;
-    font-weight: 600;
-    transition: all .4s ease-in-out;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    outline: none;
-}
-
-.header_menu .header_btn .menu_btn:hover {
-    color: #fff;
-}
-
-.header_menu .header_btn .menu_btn::after {
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: #7869fa;
-    z-index: -1;
-    transition: all .4s ease-in-out;
-}
-
-.header_menu .header_btn .menu_btn:hover::after {
-    width: 100%;
-}
-
-/* ======================== baner_section  ============================  */
-.baner_section {
-    background-color: #f6f9fc;
-    overflow: hidden;
-    height: 74vh;
-}
-
-/* .baner_section .baner_width {
-    width: 1613px;
-} */
-
-.baner_section .left_baner_content {
-    padding-top: 159px;
-}
-
-.baner_section .left_baner_content h1 {
-    font-weight: 600;
-    line-height: 4.7rem;
-    font-size: 52px;
-}
-
-.baner_section .left_baner_content p {
-    font-size: 19px;
-    margin: 30px 0;
-    font-weight: 300;
-    color: #767676;
-}
-
-.baner_section .left_baner_content .baner_btn {
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 50px;
-    margin-top: 19px;
-    transition: all .4s ease-in-out;
-}
-
-.baner_section .left_baner_content .baner_btn:hover {
-    background-color: #fff;
-    color: #0d6efd;
-}
-
-.baner_section img {
-    border-radius: 50%;
-    position: absolute;
-    top: -194px;
-    right: -463px;
-    height: 888px;
-    width: auto;
-}
-
-.baner_section .baner_right_img {
-    position: relative;
-}
-
-/* ======================== service_section  ============================ */
-.service_section {
-    padding: 12px 0 110px 0 !important;
-}
-
-.service_section .service_top_content {}
-
-.service_section .service_top_content hr {
-    width: 63px;
-    height: 3px;
-    opacity: 1;
-    color: #3763eb;
-}
-
-.service_section .service_top_content h4 {
-    font-size: 16px;
-    font-weight: 300;
-    color: #0d6efd;
-}
-
-.service_section .service_top_content h1 {
-    font-weight: 700;
-    line-height: 3.5rem;
-    margin: 23px 0;
-    font-size: 45px;
-}
-
-.service_section .service_top_content p {
-    font-size: 19px;
-    color: #767676;
-    font-weight: 300;
-}
-
-.service_section .service_item {
-    border-radius: 10px;
-    transition: all .4s ease-in-out;
-}
-
-.service_section .service_item h3 {
-    font-weight: 600;
-    font-size: 21px;
-    line-height: 2.0rem;
-}
-
-.service_section .service_item .icone {
-    background-color: #3763eb;
-    color: white;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    margin: 46px 0;
-    border-radius: 38px 38px 38px 0px;
-    position: relative;
-    margin-bottom: 55px;
-    transition: all .4s ease-in-out;
-}
-
-.service_section .service_item .icone::after {
-    content: "";
-    top: 144%;
-    left: 0;
-    height: 3px;
-    width: 40%;
-    background-color: #3763eb;
-    position: absolute;
-    transition: all .4s ease-in-out;
-}
-
-.service_section .service_item p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #767676;
-}
-
-.service_section .service_item:hover {
-    background-color: #3763eb !important;
-    color: white;
-}
-
-.service_section .service_item:hover p {
-    color: white;
-}
-
-.service_section .service_item:hover .icone {
-    background-color: white;
-    color: #3763eb;
-}
-
-.service_section .service_item:hover ::after {
-    width: 80%;
-    background-color: white;
-}
-
-.service_section .first_position {
-    position: relative;
-    z-index: 1;
-}
-
-.service_section .first_position img {
-    position: absolute;
-    top: 129px;
-    left: -53px;
-    z-index: -1;
-}
-
-/* ======================== play_button_section  ============================  */
-.play_button_section {
-    background-image: url(https://i.ibb.co/z2TQJkZ/video-bg.jpg);
-    position: relative;
-    padding: 170px;
-    color: white;
-    z-index: 1;
-}
-
-.play_button_section::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.8;
-    content: "";
-    z-index: -1;
-
-}
-
-.play_button_section .play_button_text h4 {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.play_button_section .play_button_text h1 {
-    font-weight: 800;
-    font-size: 42px;
-    margin: 19px 0;
-}
-
-.play_button_section .play_button_text hr {
-    height: 3px;
-    width: 73px;
-    margin: auto;
-    color: #fff;
-    opacity: 1;
-}
-
-.play_button_section .play_button_text p {
-    margin-top: 23px;
-}
-
-.play_button_section .play_button_text .play_button_icone {
-    width: 85px;
-    height: 85px;
-    margin: auto;
-    margin-top: 153px;
-    position: relative;
-}
-
-.play_button_section .play_button_text .play_button_icone .fa-play {
-    font-size: 27px;
-    height: 85px;
-    width: 85px;
-    background: #fff;
-    color: #3e65da;
-    line-height: 85px;
-    border-radius: 50%;
-    position: relative;
-
-}
-
-.play_button_section .play_button_text .play_button_icone::after {
-    content: "";
-    width: 99px;
-    height: 99px;
-    top: -7px;
-    left: -7px;
-    border: 1px solid #fff;
-    position: absolute;
-    border-radius: 50%;
-    animation: play_btn 1.6s ease-out infinite;
-    /* transition: .9s; */
-}
-
-.play_button_section .play_button_text .play_button_icone::before {
-    /* ! content: ""; */
-    width: 115px;
-    height: 115px;
-    top: -15px;
-    left: -15px;
-    border: 1px solid #fff;
-    position: absolute;
-    border-radius: 50%;
-    content: "";
-    animation: play_btn 1.6s ease-out infinite;
-    /* transition: .9s; */
-}
-
-@keyframes play_btn {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    25% {
-        transform: scale(0.9);
-        opacity: .5;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: .7;
-    }
-
-    75% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1.3);
-        opacity: 0;
-    }
-}
-
-/* ======================== pricing_section  ============================ */
-
-.pricing_items {
-    transition: all .4s ease-in-out;
-}
-
-.pricing_section .pricing_text {}
-
-.pricing_text h5 {
-    font-size: 16px;
-    color: #3e65da;
-}
-
-.pricing_text h1 {
-    font-size: 45px;
-    font-weight: 600;
-    margin-bottom: 22px;
-}
-
-.pricing_text hr {
-    height: 3px;
-    width: 73px;
-    margin: auto;
-    color: #3e65da;
-    opacity: 1;
-}
-
-.pricing_text p {
-    font-size: 16px;
-    margin-top: 19px;
-
-}
-
-.pricing_section .pricing_items {}
-
-.pricing_section .pricing_items h5 {
-    margin: 34px;
-    font-size: 19px;
-    font-weight: 500;
-}
-
-.pricing_section .pricing_items h1 {
-    font-weight: 600;
-    margin-bottom: 59px;
-}
-
-.pricing_items p {
-    color: #b1aca6;
-    font-weight: 500;
-    transition: all .4s ease-in-out;
-}
-
-.pricing_section .pricing_items .p_top {
-    margin-top: 30px;
-}
-
-.pricing_section .pricing_items hr {
-    height: 2px;
-    width: 200px;
-    margin: auto;
-    color: #f6f9fc;
-    opacity: 1;
-}
-
-.common_button {
-    font-size: 15px;
-    font-weight: 600;
-    padding: 10px 19px;
-    border-radius: 50px;
-    margin: 20px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: all .4s ease-in-out;
-    border-color: #0d6efd;
-}
-
-.common_button::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background-color: #0d6efd;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s ease-in-out;
-    border-color: #0d6efd;
-}
-
-.common_button:hover::after {
-    width: 100%;
-}
-
-.pricing_items:hover {
-    background-color: #0201ff !important;
-    color: white !important;
-}
-
-.pricing_items:hover p {
-    color: #fff;
-}
-
-.pricing_items:hover .common_button {
-    background-color: #fff;
-    color: #ddd;
-    border-color: #0d6efd;
-}
-
-
-/*  ======================== buttom_banner_section  ============================ */
-
-.buttom_banner_section {
-    background-image: url(https://i.ibb.co/BKYJKnf/free-bg.jpg);
-    position: relative;
-    padding: 145px;
-    color: white;
-    z-index: 1;
-}
-
-.buttom_banner_section::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #5177ec;
-    opacity: 0.8;
-    content: "";
-    z-index: -1;
-
-}
-
-.buttom_banner_section .bbs {}
-
-.buttom_banner_section .bbs h5 {
-    color: white;
-}
-
-.buttom_banner_section .bbs h1 {
-    font-size: 35px;
-    font-weight: 800;
-    margin: 31px;
-}
-
-.buttom_banner_section .bbs hr {
-    color: #fff;
-    height: 2px;
-}
-
-.buttom_banner_section .bbs p {
-    color: white;
-    font-weight: 600;
-    font-size: 17px;
-}
-
-.buttom_banner_section .bbs .common_button {
-    padding: 13px 33px;
-    color: #0d6efd;
-    background-color: #fff;
-    border-color: #fff;
-}
-
-.buttom_banner_section .bbs .common_button:hover {
-    color: #fff;
-}
-
-/*  ======================== footer_contact_section  ============================ */
-.footer_contact_section {
-    padding: 115px;
-}
-
-.footer_contact_section .footer_contact_form {
-    padding: 60px;
-    padding-right: 83px;
-}
-
-.footer_contact_section .footer_contact_form h3 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 31px;
-}
-
-.footer_contact_section .footer_contact_form p {
-    color: #ffffff;
-    margin: 25px 0;
-    width: 71%;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.footer_contact_section .footer_contact_form .email {
-    border-radius: 50px;
-}
-
-.footer_contact_section .footer_contact_form .submit {
-    border-radius: 50px;
-    color: #fff;
-    background-color: #0d6efd;
-    font-weight: 700;
-}
-
-.footer_content {
-    padding: 53px;
-    padding-right: 64px;
-}
-
-.footer_content h5 {
-    font-size: 25px;
-}
-
-.footer_content a {
-    text-decoration: none;
-    background-color: #0d6efd;
-    color: #fff;
-    display: inline-block;
-    padding: 8px 17px;
-    border-radius: 50px;
-    margin-top: 85px;
-}
-
-.footer_row {}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font famely -->
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- fontwasome -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- ICON LINK -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Main-Assignments-class-24</title>
+</head>
+
+<body>
+    <!-- ======================== header_section  ============================ -->
+    <section class="header_menu">
+        <nav class="navbar navbar-expand-lg nav_menu ">
+            <div class="container">
+                <a class="navbar-brand logo" href="#"><img src="https://i.ibb.co/mJ96BKh/lfwfacademy-logo-1.webp"
+                        alt="logo img"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="li_active"><a class=" activee " href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Pages</a>
+                            <ul>
+                                <li><a href="#">404 Page Error </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="header_btn">
+                        <button class="btn menu_btn">Get It Now</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- ======================== baner_section  ============================ -->
+    <section class="baner_section">
+        <div class="container">
+            <div class="row baner_width ms-auto">
+                <div class="col-lg-6 ">
+                    <div class="left_baner_content">
+                        <h1> Take your business to next level.</h1>
+                        <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus mollitia
+                            error quia quibusdam sint? Eos natus molestiae aut explicabo?</p>
+                        <div class="btn btn-primary baner_btn">
+                            Discover More
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="baner_right_img">
+                        <img src="https://i.ibb.co/xgvyVLp/hero-image.jpg" alt="" height="600" width="auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== service_section  ============================ -->
+    <section class="service_section py-5">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-6 ">
+                    <div class="service_top_content">
+                        <h4>CORE FEATURES</h4>
+                        <h1>Provide Awesome Service with Our tools</h1>
+                        <hr>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi accusantium nobis
+                            ea
+                            temporibus?</p>
+                    </div>
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+
+            <div class="row gx-4">
+
+                <div class="col-lg-3 first_position ">
+                    <div class="service_item bg-light p-4 ">
+                        <h3>Discover, Explore the Product</h3>
+                        <i class="lni lni-microscope icone"></i>
+                        <p class="lead">Discover, Exploer & Understanding The Product</p>
+
+                    </div>
+                    <img class="bg_img" src="https://i.ibb.co/F4Y0ZZv/service-patern.png" alt="">
+                </div>
+
+                <div class="col-lg-3 ">
+                    <div class="service_item bg-light p-4">
+                        <h3>Discover, Explore the Product</h3>
+                        <i class="lni lni-blackboard icone"></i>
+                        <p class="lead">Discover, Exploer & Understanding The Product</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 ">
+                    <div class="service_item bg-light p-4">
+                        <h3>Discover, Explore the Product</h3>
+                        <i class="lni lni-ux icone"></i>
+                        <p class="lead">Discover, Exploer & Understanding The Product</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 ">
+                    <div class="service_item bg-light p-4">
+                        <h3>Discover, Explore the Product</h3>
+                        <i class="lni lni-graph icone"></i>
+                        <p class="lead">Discover, Exploer & Understanding The Product</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== play_button_section  ============================ -->
+    <section class="play_button_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 text-center play_button_text">
+                    <h4>CREATEYOUR OWN EXPERIENCE</h4>
+                    <h1>Ready To Grow Faster</h1>
+                    <hr>
+                    <p> Ther are many variations of passages of loren Ipsum available, but the majority have suffered
+                        alteration in some form.</p>
+                    <div class="play_button_icone">
+                        <i class="fas fa-play fa-play-1 "></i>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== pricing_section  ============================ -->
+    <section class="pricing_section bg-light py-5">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="pricing_text text-center ">
+                        <h5>PRICING TABLE</h5>
+                        <h1>our pricing</h1>
+                        <hr>
+                        <p class="lead">There are many variations of lorem ipsum avaiable, but the majority hav suffered
+                            alterraction in some form</p>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row g-4 py-5">
+                <div class="col-lg-4">
+                    <div class="pricing_items text-center bg-white p-4">
+                        <h5>Single Use</h5>
+                        <h1>$10</h1>
+                        <hr>
+                        <p class="p_top">Up to 5 users</p>
+                        <p>Basic support on Github</p>
+                        <p>Monthly updates</p>
+                        <p>Free Cancelation</p>
+                        <button class="btn btn-primary common_button">Start Free Trial</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="pricing_items text-center bg-white p-4 ">
+                        <h5>Single Use</h5>
+                        <h1>$10</h1>
+                        <hr>
+                        <p class="p_top">Up to 5 users</p>
+                        <p>Basic support on Github</p>
+                        <p>Monthly updates</p>
+                        <p>Free Cancelation</p>
+                        <button class="btn btn-primary common_button">Start Free Trial</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="pricing_items text-center bg-white p-4">
+                        <h5>Single Use</h5>
+                        <h1>$10</h1>
+                        <hr>
+                        <p class="p_top">Up to 5 users</p>
+                        <p>Basic support on Github</p>
+                        <p>Monthly updates</p>
+                        <p>Free Cancelation</p>
+                        <button class="btn btn-primary common_button">Start Free Trial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ======================== buttom_banner_section  ============================ -->
+
+    <div class="buttom_banner_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+
+                <div class="col-lg-6">
+                    <div class="pricing_text text-center bbs ">
+                        <h5>LFWF FREE LITE</h5>
+                        <h1>Currently You Are Using Free Lite Version Of Massive</h1>
+                        <hr>
+                        <p class="lead">There are many variations of lorem ipsum avaiable, but the majority hav suffered
+                            alterraction in some form</p>
+                        <button class="btn btn-primary common_button">Purchase Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================== footer_contact_section  ============================ -->
+    <section class="footer_contact_section bg-light">
+        <div class="container">
+            <div class="row footer_row gx-5">
+                <div class="col-lg-7">
+                    <div class="footer_contact_form bg-primary shadow ">
+                        <h3>Sign up for Newsletter</h3>
+                        <p>sign Up and short using a free account to see what it's all about</p>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <input type="email" class="form-control email" placeholder="Your email address"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="submit" class="form-control submit" value="Subscribe Now!" aria-label="Last name">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer_content shadow">
+                        <h5> Do you want to grow your online business with massive?</h5>
+                    <a href="#">Gat Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
